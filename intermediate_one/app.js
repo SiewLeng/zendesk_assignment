@@ -74,13 +74,6 @@ function isValidResponse(response, boardValue) {
 function isWinning(i, j, boardValue, playerValue) {
   const n = boardValue.length;
   const winningDim = 3;
-  const validIndex = (index) => {
-    if ( -1 < index && index < n) {
-      return true;
-    } else {
-      return false;
-    }
-  }
   const isRow = () => {
     let result = false;
     for (let k = 0; k < winningDim; k++) {
