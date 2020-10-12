@@ -167,7 +167,7 @@ async function start() {
     let player = players[playerNumber];
     let response = await ask(`${player.name}, please choose a box to place an '${player.value}' into: `);
     while (!isValidResponse(response, boardValue)) {
-      response = await ask(`${player.name}, please choose a box to place an '${player.value}' into with number from 1 to ${maxNumber}: `);
+      response = await ask(`${player.name}, please choose a box to place an '${player.value}' into with valid number: `);
     }
 
     // update the board with the player's response
